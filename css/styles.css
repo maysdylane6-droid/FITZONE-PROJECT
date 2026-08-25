@@ -1,0 +1,257 @@
+
+
+:root{
+    --primary: rgb(55,150,250);
+    --secondary: rgb(255,255,255);
+    --troisieme: yellow;
+    --quatrieme: black;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    gap: 30px;
+
+}
+
+#choix {
+    width: 400px;
+    height: 400px;
+}
+
+.img-list {
+    width: 300px;
+    height: 300px;
+}
+#img-logo {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+}
+ 
+
+#main-section {
+   
+    color:var(--quatrieme);
+    background-color: var(--secondary);
+    
+}
+
+.nav-bar {
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+     display: flex;
+     width: 200px;
+    align-items: center;
+    background-color: var(--secondary); 
+    animation: navbar 2s ease; 
+}
+
+.nav-bar:hover {
+    background-color: var(--troisieme);
+}
+
+button {
+    background-color: var(--troisieme);
+}
+
+@keyframes navbar {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.nav-list {
+    display: flex;
+     flex-direction: column;
+     gap: 20px;
+    list-style: none;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 0;
+}
+
+#Accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#photo-accueil {
+    width: min(600px, 100%);
+    height: auto;
+}
+
+.tarif-list {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarif-donne {
+    border: 2px solid ;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+     background-color: var(--troisieme);
+     background-image: url("../photos projet FITZONE/fitnesscardio2.jpg");
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+     animation: tarif 2s ease infinite;
+}
+
+.tarif-donne:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+@keyframes tarif {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(-5px);
+    }
+}
+
+#basic {
+        background-image: url("../photos projet FITZONE/cardio.jpg");
+        background-size: cover;
+        background-position: center;
+}
+
+#vip {
+        background-image: url("../photos projet FITZONE/fitnesspure.jpg");
+        background-size: cover;
+        background-position: center;
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.tarif-title {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li[class=tarif-donne] {
+    list-style-type: none;
+    color: gold;
+}
+
+li {
+ list-style-type: none;   
+}
+
+figcaption {
+font-size: 2em;
+}
+
+figure {
+    margin: 20px;
+}
+
+#Tarifs {
+font-size: 1.5em;
+}
+
+#section-temoignages {
+margin: 30px;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.list-reseaux {
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+@media (max-width: 768px) {
+
+    #header-title {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tarif-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+button:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
